@@ -1,0 +1,3 @@
+/target/
+# 忽略敏感憑證檔案
+/target/classes/credentials*.json
