@@ -49,7 +49,7 @@ public class GmailOAuthSender {
 
     public static Gmail getGmailService() throws Exception {
 //    	clearStoredTokens();
-        GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(GmailOAuthSender.class.getResourceAsStream("/credentials3.json")));
+        GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(GmailOAuthSender.class.getResourceAsStream("/credentials.json")));
         GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
                 GoogleNetHttpTransport.newTrustedTransport(), JSON_FACTORY, clientSecrets, SCOPES)
                 .setAccessType("offline")
