@@ -38,7 +38,7 @@ public class GmailOAuthSender {
     public static void main(String[] args) throws Exception {
         Gmail service = getGmailService();
         try {
-        	sendMessage(service, "me", createEmail("therule99095@gmail.com", "信件標題", "信件內容"));
+        	sendMessage(service, "me", createEmail("justin208208208@gmail.com", "信件標題", "信件內容"));
             System.out.println("郵件已成功寄出！");
         } catch (Exception e) {
             e.printStackTrace();
@@ -48,7 +48,7 @@ public class GmailOAuthSender {
     }
 
     public static Gmail getGmailService() throws Exception {
-//    	clearStoredTokens();
+  //  	clearStoredTokens();
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(GmailOAuthSender.class.getResourceAsStream("/credentials.json")));
         GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
                 GoogleNetHttpTransport.newTrustedTransport(), JSON_FACTORY, clientSecrets, SCOPES)
